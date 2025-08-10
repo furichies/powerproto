@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-black text-white font-sans;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  @apply px-4 py-2 rounded-md transition-colors duration-200;
+}
+
+button.active {
+  @apply bg-red-600 text-white font-bold shadow-lg;
+}
+
+button.inactive {
+  @apply bg-gray-800 text-gray-300 hover:bg-red-800;
+}
+
+.navbar {
+  @apply flex justify-around bg-gray-900 border-t border-red-700;
+}
+
+h1, h2, h3 {
+  @apply text-red-500 font-bold;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #b91c1c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}

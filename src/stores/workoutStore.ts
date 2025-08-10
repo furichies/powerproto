@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import type { WorkoutSet } from "../types";
+import type { WorkoutSet } from "../types/index.js";
 
 interface WorkoutContextType {
   sets: WorkoutSet[];
