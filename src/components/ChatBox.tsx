@@ -42,7 +42,7 @@ export default function ChatBox() {
     setTimeout(() => {
       const responses = [
         "¡Excelente! Recuerda mantener la espalda recta 🏋️",
-        "¡Vamos Diana! Cada repetición te hace más fuerte 💪",
+        "¡Vamos campeón! Cada repetición te hace más fuerte 💪",
         "Perfecto. Controla la bajada y explota en la subida 🚀",
         "¡Así se hace! La técnica es más importante que el peso 🎯",
         "¡Increíble progreso! Sigue así campeona 👑",

@@ -1,10 +1,10 @@
-# DianaPower 🏋️‍♀️
+# IRONFRAME Labs 🏋️‍♀️
 
 **Tu Coach Personal de Powerlifting**
 
-DianaPower es una aplicación web progresiva diseñada específicamente para entrenamientos de powerlifting, enfocada en los tres movimientos principales: sentadillas, peso muerto y press de banca. La aplicación combina registro de rutinas, comunicación con coach virtual y grabación de ejercicios en una interfaz moderna y fácil de usar.
+IRONFRAME Labs es una aplicación web progresiva diseñada específicamente para entrenamientos de powerlifting, enfocada en los tres movimientos principales: sentadillas, peso muerto y press de banca. La aplicación combina registro de rutinas, comunicación con coach virtual y grabación de ejercicios en una interfaz moderna y fácil de usar.
 
-![DianaPower](https://img.shields.io/badge/DianaPower-v1.0.0-red?style=for-the-badge&logo=react)
+![IRONFRAME Labs](https://img.shields.io/badge/IRONFRAME_Labs-v1.0.0-red?style=for-the-badge&logo=react)
 
 ## ✨ Características Principales
 
@@ -15,10 +15,12 @@ DianaPower es una aplicación web progresiva diseñada específicamente para ent
 - ✅ Campo de notas para observaciones personalizadas
 - ✅ Separación entre entrenamiento del día e histórico
 
-### 📊 **Historial Completo**
+### 📊 **Historial y Analytics**
 - ✅ Vista cronológica de todos los entrenamientos
 - ✅ Agrupación automática por fechas
-- ✅ Estadísticas de progreso visual
+- ✅ **Gráficos de progreso visual** con Chart.js
+- ✅ **Análisis de volumen** y frecuencia de entrenamientos
+- ✅ **Progresión de pesos máximos** por ejercicio
 - ✅ Persistencia local de datos
 
 ### 💬 **Coach Virtual**
@@ -38,6 +40,7 @@ DianaPower es una aplicación web progresiva diseñada específicamente para ent
 - **Frontend**: React 18 + TypeScript
 - **Build Tool**: Vite
 - **Estilos**: Tailwind CSS
+- **Gráficos**: Chart.js + React Chart.js 2
 - **Base de Datos**: IndexedDB (via Dexie)
 - **Almacenamiento**: localStorage + IndexedDB
 - **Tabla**: TanStack React Table
@@ -54,8 +57,8 @@ DianaPower es una aplicación web progresiva diseñada específicamente para ent
 ### Instalación Local
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/diana-power.git
-cd diana-power
+git clone https://github.com/tu-usuario/ironframe-labs.git
+cd ironframe-labs
 
 # Instalar dependencias
 npm install
@@ -84,7 +87,9 @@ npm run preview
 4. Establece el **peso objetivo** en kg
 5. Durante/después del ejercicio, completa **repeticiones** y **peso real**
 6. Añade **notas** opcionales (técnica, sensaciones, etc.)
-7. Usa "**📈 Histórico**" para revisar entrenamientos pasados
+7. Usa "**📊 Gráficos**" para análisis visual de progreso
+8. Usa "**📈 Histórico**" para revisar entrenamientos pasados
+9. Usa "**🎲 Demo**" para cargar datos de ejemplo
 
 ### 2. **Pestaña Chat**
 1. Escribe mensajes a tu coach virtual
@@ -97,6 +102,12 @@ npm run preview
 3. Presiona "**⏹️ Detener Grabación**" al finalizar
 4. Guarda el video con "**💾 Guardar Video**"
 5. Accede a "**Ver Videos**" para revisar grabaciones anteriores
+
+### 4. **Sistema de Analytics**
+1. **Gráfico de Progresión**: Evolución de pesos máximos por ejercicio
+2. **Análisis de Volumen**: Volumen total por sesión (series × reps × peso)
+3. **Frecuencia de Entrenamientos**: Sesiones realizadas por ejercicio
+4. **Datos de los últimos 30 días** para análisis relevante
 
 ## 🎯 Casos de Uso
 
@@ -133,6 +144,7 @@ npx tsc --noEmit    # Verificación de tipos TypeScript
 src/
 ├── components/           # Componentes React
 │   ├── WorkoutSheet.tsx # Registro de rutinas
+│   ├── WorkoutCharts.tsx # Gráficos y analytics
 │   ├── ChatBox.tsx      # Chat con coach
 │   ├── CameraRecorder.tsx # Grabación de video
 │   └── VideoList.tsx    # Lista de videos guardados
@@ -141,6 +153,9 @@ src/
 │   └── useIndexedDB.ts   # Gestión IndexedDB
 ├── types/               # Definiciones TypeScript
 │   └── index.ts         # Interfaces principales
+├── utils/               # Utilidades
+│   └── demoData.ts      # Generación de datos demo
+├── imgs/                # Recursos de imágenes
 ├── App.tsx              # Componente principal
 ├── main.tsx             # Punto de entrada
 └── index.css            # Estilos globales
@@ -224,15 +239,18 @@ Este proyecto está bajo la Licencia GNU General Public License v3.0 - ver el ar
 
 ## 🔮 Roadmap Futuro
 
-- [ ] 📈 Gráficos de progreso con Chart.js
+- [x] 📈 Gráficos de progreso con Chart.js ✅
+- [x] 📊 Análisis de frecuencia de entrenamiento ✅
+- [x] 🎲 Sistema de datos demo automático ✅
 - [ ] 🔄 Sincronización en la nube (opcional)
 - [ ] 📋 Plantillas de rutinas predefinidas
 - [ ] ⏱️ Temporizador de descanso entre series
 - [ ] 🏆 Sistema de logros y medallas
-- [ ] 📊 Análisis de frecuencia de entrenamiento
 - [ ] 🎯 Calculadora de 1RM automática
 - [ ] 📱 PWA con instalación offline
+- [ ] 🌙 Modo oscuro/claro toggle
+- [ ] 📤 Exportación de datos (PDF, CSV)
 
 ---
 
-**DianaPower** - Desarrollando la fuerza, una repetición a la vez 💪👑
+**IRONFRAME Labs** - Desarrollando la fuerza, una repetición a la vez 💪⚡
